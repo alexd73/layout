@@ -1,0 +1,104 @@
+/*
+Menu
+*/
+ul {
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    @include flexbox();
+    @include justify-content(space-around);
+    height: 100%;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    &__item {
+        display: inline-block;
+    }
+    &__link {
+        color: black;
+        text-decoration: none;
+        text-transform: lowercase;
+        line-height: 58px;
+    }
+}
+
+/**
+Vertical top menu
+*/
+
+.top {
+    @include flex-basis(span(12));
+    @include flexbox();
+
+    background-color: #fff;
+    height: 64px;
+    &__logo {
+        @include flex-basis(span(1));
+        margin: 8px;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__menu {
+        @include flex-basis(span(10));
+    }
+    &__toggleMenu {
+        @include flex-basis(span(1));
+        padding: 0 5px;
+    }
+    &__icon {
+        width: 48px;
+        position: relative;
+        margin: 15px auto;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span {
+            position: absolute;
+            display: block;
+            height: 2px;
+            width: 48px;
+            background: #000;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            &:nth-child(1) {
+                top: 0px;
+            }
+            &:nth-child(2) {
+                top: 16px;
+            }
+            &:nth-child(3) {
+                top: 32px;
+            }
+        }
+        &.open {
+            span {
+                &:nth-child(1) {
+                    top: 18px;
+                    -webkit-transform: rotate(135deg);
+                    -moz-transform: rotate(135deg);
+                    -o-transform: rotate(135deg);
+                    transform: rotate(135deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    top: 18px;
+                    -webkit-transform: rotate(-135deg);
+                    -moz-transform: rotate(-135deg);
+                    -o-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+
+    }
+}
+

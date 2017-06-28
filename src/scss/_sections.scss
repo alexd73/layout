@@ -1,0 +1,18 @@
+/*
+Section 'MAIN'
+*/
+
+.main {
+    min-height: 100px;
+}
+
+.container {
+    @include container(12);
+}
+
+// элемент с подчеркиванием на весь экран
+.item--1 {
+    border-bottom: solid 1px black;     
+    padding-left: 16px;
+    padding-right: 16px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="page flex">
+        {% include 'templates/top.twig' %}
+        <div class="content">
+            <aside class="content__main">
+                <section id="banner" class="row">
+                    {% include "templates/banner.twig" %}
+                </section>
+                <section id="highlight" class="row item--1">
+                    {% include "templates/main_text_block.twig" %}
+                </section>
+                <section id="courses" class="flex">
+                    {% set flex = 'flex' %}
+                    {% include "templates/programs.twig" %}
+                </section>
+            </aside>
+        </div>
+        <div class="outer">
+            <div class="inner">inner</div>
+        </div>
+
+    </div>
+
+
+    <div class="wrapper float">
+        <div class="full float">
+            <div class="half">
+                <div class="half">
+                    <div class="title1">тест 1</div>
+                </div>
+                <div class="half">тест 2</div>
+            </div>
+            <div class="half">
+                <div class="half">тест 1</div>
+                <div class="half">тест 2</div>
+            </div> 
+        </div>
+    </div>
+<svg class="block svg-text" height="150" width="112">
+			<text x="0" y="11">Обычный текст</text>
+			<text x="27" y="8" transform="rotate(45)">Текст под углом 45°</text>
+			<text x="18" y="0" transform="rotate(90)">Вертикальный текст</text>
+		</svg>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</html>

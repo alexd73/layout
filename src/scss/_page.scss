@@ -1,0 +1,18 @@
+div {
+    box-sizing: border-box;
+}
+.page {
+    // @include container();
+}
+
+.content {
+    background-image: url('../images/top_background.jpg');
+    background-size: 100% 480px;
+    background-repeat: no-repeat;
+}
+
+.text {
+    &--big {
+        font-size: 30px;
+    }
+}

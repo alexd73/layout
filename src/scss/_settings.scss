@@ -1,0 +1,11 @@
+// $base-line-height: 7.5;
+$susy: (
+    columns: 12,
+    gutters: 0,
+
+    debug: (
+        image: show-columns,
+        output: overlay,
+        toggle: top left
+    )
+)

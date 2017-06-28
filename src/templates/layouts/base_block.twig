@@ -1,0 +1,35 @@
+{% block block_content %}
+<div class="block container container--1 {{ block_type }} {{ flex }} ">
+        {% if title %}
+        <div class="title flex">
+        {% if auditory %}
+            <span class="auditory">
+                {{ auditory }}
+            </span> 
+        {% endif %} 
+        <h3 class="title--1">{{ title }}</h3>
+        </div>
+        {% endif %} {% if subtitle %}
+        <h3 class="subtitle">{{ subtitle }}</h3>
+        {% endif %} 
+        <div class="dates-wrapper flex">
+            {% if dates %}
+                <div class="dates">
+                    {% for date in dates %}
+                        <div class="date">
+                            <svg>
+                                <text x="0" y="50%" transform="rotate(-90)">{{ date }}</text>
+                            </svg>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %} 
+            {% if weeks %}
+                <div class="weeks"><span> {{ weeks }}</span> </div>
+            {% endif %} 
+        </div>
+        {% if body %} 
+            <div class="body"><p class="text {{ text_type }}">{{ body }}</p> </div>
+        {% endif %}
+</div>
+{% endblock block_content %}
