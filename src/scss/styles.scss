@@ -1,53 +1,25 @@
-@import 'normalize';
-@import 'variables';
-@import 'susy';
-@import 'settings';
-@import 'flexbox';
-@import 'page';
-@import 'sections';
-@import 'menu';
-@import 'blocks';
+@import "variables";
+@import "media-queries";
+@import "normalize";
+@import "html";
 
-@font-face {
-    font-family: 'Neue Haas Unica W1G';
-    src: url('webfont.ttf')  format('truetype');
+@import "page";
+@import "top";
+@import "regions";
+@import "blocks";
+@import "block_course";
+
+@import "menu";
+
+.underline {
+  border-bottom: $border;
 }
 
-html {
-    font-family: "Neue Haas Unica W1G", sans-serif;
+.text {
+  &--big {
     font-size: 30px;
-
-}
-.flex {
-    @include flexbox();
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
-}
-.title--1 {
-  font-size: 30px;
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: 1.2px;
-  text-align: left;
-  color: #000000;
-}
-
-p {
-    margin: 0;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-}
-
-.wrapper {
-    @include container();
-}
-
-.half {
-    width:  span(6);
-    @include nested(3){
-        .title1 {
-            margin-left: span(1);
-        }
+    @include mq($min-width: 641px){
+      font-size: 45px;
     }
+  }
 }

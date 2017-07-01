@@ -1,102 +1,34 @@
 .block {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    .title {
-        width: span(6);
-        margin-right: span(4);
-        margin-left: span(1);
-        @include nested(6){
-            span {
-                width: span(1);
-                text-align: center;
-                display: inline-block;
-            }
-            h3 {
-                width: span(5);
-                margin: 0;
-            }
-        }
-    }
-    .body {
-        width: span(10);
-        margin-left: span(1);
-    }
-    .dates-wrapper {
-        margin-left: span(2);
-        width: span(9);
-        @include nested(9){
-            .dates {
-                width: span(5);
-            }
-            .weeks {
-                width: span(4);
-            }
-        }
-        .date, .weeks {
-            font-size: 22px;
-            span {
-                border-bottom: 1px solid;
-            }
-        }
-        .weeks {
-            text-align: right;
-        }
-    }
+  &__title {
+  }
+  &__body {
+    font-size: 30px;
+  }
+  .dates-wrapper {
+  }
 }
 
 .block--1 {
+  border-bottom: $border;
+  padding-left: 32px;
+  padding-right: 32px;
+  .block__inner {
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
     background: $bg;
+  }
 }
 
 
-#courses {
-    .item--1 {
-        @include susy-breakpoint(641px) {
-            width: span(6 wide);
-            &:nth-child(odd) {
-                padding-right: 0;
-                border-right: 1px solid;
-            }
-            &:nth-child(even) {
-                padding-left: 0;
-            }
-            @include nested(6) {
-                .dates-wrapper {
-                    @include order(-1);
-                    width: span(1);
-                    margin: 0;
-                    .dates, .weeks {
-                        svg {
-                            width: 130px;
-                            text {
-                                transform: rotate(-90deg);
-                                transform-origin: left top 0;  
--ms-transform-origin: left top 0;
--moz-transform-origin: left top 0;
--webkit-transform-origin: left top 0;
-                            }
-                        }
-                        // display: inline-block;
-                        // white-space: nowrap;
-                        // transform: rotate(-90deg) translate(-100%,0);
-                        // transform-origin: 0 0;                    
-                    }
-                    .date{
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-    }
-}
 
 /*
 Banner
 */
 
 .banner {
-    background-color: #fff;
-    opacity: 0.2;
-    height: 450px;
+  background-color: #fff;
+  opacity: 0.2;
+  height: 450px;
 }
 

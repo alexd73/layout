@@ -1,0 +1,46 @@
+.auditory {
+  font-size: 30pt;
+}
+.block--course {
+  .block__inner {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(12, 8.333333%);
+    grid-template-rows: repeat(3, auto);
+    @include mq($min-width: 641px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  .block__title {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-column: 2 / 12;
+    grid-row: 1 / 2;
+    margin-bottom: 25px;
+  }
+  .block__dates-wrapper {
+    font-size: 22px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 11;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @include mq($min-width: 641px) {
+      grid-column: 2 / span 4;
+      //white-space: nowrap;
+      //.block__dates, .block__weeks, .block__date {
+      //  display: inline-block;
+      //}
+    }
+  }
+  .block__weeks {
+    text-align: right;
+  }
+  .block__body {
+    grid-row: 4 / 5;
+    grid-column: 2 / 12;
+    @include mq($min-width: 641px) {
+      grid-column: 2 / span 4;
+    }
+  }
+
+}

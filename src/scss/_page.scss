@@ -1,18 +1,30 @@
-div {
-    box-sizing: border-box;
-}
-.page {
-    // @include container();
-}
-
-.content {
-    background-image: url('../images/top_background.jpg');
-    background-size: 100% 480px;
-    background-repeat: no-repeat;
-}
-
-.text {
-    &--big {
-        font-size: 30px;
+.main-grid {
+    @include mq($min-width: 641px) {
+        display: grid;
+        grid-template-columns: 95px 1fr;
+        grid-template-rows: 1fr 650px;
     }
 }
+
+
+.nav {
+    @include mq($min-width: 641px) {
+        min-height: 100vh;
+        border-right: $border;
+    }
+}
+
+.main {
+    background: #fff;
+}
+.footer {
+    background: green;
+}
+
+.footer_left {
+    background: blue;
+    @include mq($max-width: 640px) {
+        display: none;
+    }
+}
+

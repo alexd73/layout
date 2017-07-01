@@ -4,5 +4,20 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="softculture.cc" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../softculture.cc/web/core" />
+          <root url="file://$MODULE_DIR$/../softculture.cc/web/modules" />
+          <root url="file://$MODULE_DIR$/../softculture.cc/web/vendor" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../softculture.cc/web/core" />
+          <root url="file://$MODULE_DIR$/../softculture.cc/web/modules" />
+          <root url="file://$MODULE_DIR$/../softculture.cc/web/vendor" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

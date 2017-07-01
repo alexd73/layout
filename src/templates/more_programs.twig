@@ -1,0 +1,21 @@
+{% set mores = {
+    more1: {
+        title: 'Посмотреть все курсы',
+        body: '
+            <span>12</span> <span>Архитектура</span>
+            <span>12</span> <span>Дизайн</span>
+            <span>12</span> <span>Урбанистика</span>
+        ',
+    },
+    more2: {
+        body: 'Выбрать образовательный путь',
+    }
+} %}
+
+{% set block_type = 'block--1 block--course' %}
+
+{% for more in mores %}
+    {% set title = more.title %}
+    {% set body = more.body %}
+    {% include "layouts/base_block.twig" %}
+{% endfor %}
