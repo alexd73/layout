@@ -10,37 +10,77 @@
 </head>
 
 <body>
-    <div class="page main-grid">
-        <div class="nav">
-            {% include "templates/top.twig" %}
-        </div>
-        <div class="main">
-            <div class="region-header">
+<div class="page flex">
+    {#{% include 'templates/top.twig' %}#}
+    {#<div class="content">#}
+    {#<aside class="content__main">#}
+    {#<section id="banner" class="row">#}
+    {#{% include "templates/banner.twig" %}#}
+    {#</section>#}
+    {#<section id="highlight" class="row item--1">#}
+    {#{% include "templates/main_text_block.twig" %}#}
+    {#</section>#}
+    {#<section id="courses" class="flex">#}
+    {#{% set flex = 'flex' %}#}
+    {#{% include "templates/programs.twig" %}#}
+    {#</section>#}
+    {#</aside>#}
+    {#</div>#}
+    <div class="main">
+        <div class="block--1">
+            <div class="block__inner">
+
 
             </div>
-            <div class="region-highlight">
-                {% include "templates/main_text_block.twig" %}
-            </div>
-            <div class="region-content">
-                {% include "templates/programs.twig" %}
-                {% include "templates/more_programs.twig" %}
-                {% set block_type = 'block--1 block--cap' %}
-                {% include "templates/layouts/base_block.twig" %}
-            </div>
-            <div class="region-undercontent">
-                {% include "templates/layouts/why_block.twig" %}
-                {% include "templates/layouts/why_block.twig" %}
-                {% include "templates/layouts/why_block.twig" %}
-            </div>
-
-        </div>
-        <div class="footer_left">
-            Софт Культура
-        </div>
-        <div class="footer">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cupiditate illum ipsa quis. Autem doloremque eaque ipsam iusto nemo nisi numquam officia perspiciatis quaerat quo reiciendis reprehenderit, tenetur velit vitae?
         </div>
     </div>
+    <div id="block_advantage">
+        <div class="block-advantage-1 wrapper">
+            <div class="cap-image">
+
+            </div>
+            <div class="text-wrapper">
+                <div class="title">
+                    <h3>Идеология</h3>
+                </div>
+                <div class="body">
+                    <p>Мы считаем, что главное — владение не программами, а профессиональными навыками, такими как
+                        подача
+                        архитектурного проекта, верстка книги или портфолио.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block-advantage-1 wrapper">
+            <div class="cap-image">
+
+            </div>
+            <div class="text-wrapper">
+                <div class="title">
+                    <h3>Преподаватели</h3>
+                </div>
+                <div class="body">
+                    <p>Наши преподаватели — архитекторы и дизайнеры — достаточно опытны, чтобы профессионально преподавать, и достаточно молоды, чтобы понимать потребности студентов МАрхИ, БВШД, МАРШ и других школ.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block-advantage-1 wrapper">
+            <div class="cap-image">
+
+            </div>
+            <div class="text-wrapper">
+                <div class="title">
+                    <h3>Место</h3>
+                </div>
+                <div class="body">
+                    <p>Студия «Софт Культуры» находится на одной из самых оживленных улиц Москвы — Кузнецкий Мост —
+                        в здании пассажа XIX века.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
